@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Todo Categories</h2>
+        <ul class="sidebar-tabs">
+          <li class="tab active" data-category="all">All Tasks</li>
+          <li class="tab" data-category="work">Work</li>
+          <li class="tab" data-category="personal">Personal</li>
+          <li class="tab" data-category="health">Health</li>
+          <li class="tab" data-category="completed">Completed</li>
+          <li class="tab" data-category="pending">Pending</li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header>
+          <h1>Todo List</h1>
+          <div class="header-icons">
+            <button id="theme-toggle">Toggle Theme</button>
+            <button id="bell-icon" class="bell-icon">🔔</button>
+            <button id="calendar-icon" class="calendar-icon">📅</button>
+          </div>
+        </header>
+        <main>
+          <div class="todo-inputs">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Add a new todo..."
+            />
+            <input type="date" id="todo-date" />
+            <select id="todo-category">
+              <option value="work">Work</option>
+              <option value="personal">Personal</option>
+              <option value="health">Health</option>
+            </select>
+            <button id="add-todo">Add Todo</button>
+          </div>
+          <ul id="todo-list"></ul>
+        </main>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
